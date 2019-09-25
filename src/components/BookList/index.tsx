@@ -8,10 +8,10 @@ export default class BookList extends React.Component<any, any>{
         this.state = {}
     }
     render() {
-        const { list, pic, isOpacity } = this.props
+        const { list, pic, isOpacity, func } = this.props
         return (
             <div>
-                {list.map((item: any) => <Book key={item.title} {...item} pics={pic} hebrew={isOpacity} />)}
+                {list.map((item: any) => <Book key={item.title} {...item} pics={pic} hebrew={isOpacity} hwFunc={func}  />)}
             </div>
         )
     }

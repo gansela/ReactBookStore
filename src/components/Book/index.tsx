@@ -18,7 +18,12 @@ export default class Book extends React.Component<any, any>{
             props.language === "Hebrew" ? styled = { ...width, opacity: "1" } : styled = { ...width, opacity: "0.2" }
         } else styled = width
         return (
-            <div className="card" style={styled}>
+            <div className="card" style={styled} onClick={(e) => {
+                const value = props.title
+                alert(value)
+                // console.log(props.hwFunc)
+                props.hwFunc(props)
+            }}>
                 <Image pics={props.pics} refrance={props.imageLink} />
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
